@@ -87,6 +87,13 @@
 			}
 		}
 
+		function updateCapacity() {
+			var img = document.getElementById('img'),
+				textarea = document.getElementById('text');
+			if(img && text)
+				document.getElementById('capacity').innerHTML='('+textarea.value.length + '/' + steg.getHidingCapacity(img) +' chars)';
+		}
+
 		window.onload = function(){
 			document.getElementById('file').addEventListener('change', handleFileSelect, false);
 			document.getElementById('read').addEventListener('click', read, false);
