@@ -1,5 +1,18 @@
 <body>
 	<h1>Hello world</h1>
-	<img src="image.jpg" alt="Test Image" style="width:640px;height:800px;">
+	<img id="img" src="image.jpg" alt="Test Image" style="width:640px;height:800px;"/>
+	<img id="placeholder" src="" style="width:640px;height:800px;"/>
 	<script type="text/javascript" src="steganography.js"></script>
+	<script type="text/javascript">
+
+	function hide() {
+		var img = document.getElementById("img"),
+		placeholder = document.getElementById("placeholder");
+		placeholder.src = steg.encode("zain", img);
+	}
+
+	window.onload = function(){
+		hide();
+	};
+	</script>
 </body>
