@@ -129,7 +129,7 @@
 		function read() {
 			var img = document.getElementById("img"),
 				cover = document.getElementById("cover"),
-				message = document.getElementById("message"),
+				message = document.getElementById("message");
 			if(img) {
 				message.innerHTML = steg.decode(img);
 				if(message.innerHTML !== "") {
