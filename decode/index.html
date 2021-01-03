@@ -130,12 +130,10 @@
 			var img = document.getElementById("img"),
 				cover = document.getElementById("cover"),
 				message = document.getElementById("message"),
-				textarea = document.getElementById("text");
-			if(img && textarea) {
+			if(img) {
 				message.innerHTML = steg.decode(img);
 				if(message.innerHTML !== "") {
 					message.parentNode.className="";
-					textarea.value = message.innerHTML;
 				}
 			}
 		}
