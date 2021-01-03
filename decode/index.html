@@ -1,19 +1,13 @@
 <body>
-		<div id="main">
-			<input id="file" type="file"/><br/>
-			<button id="read" type="button">Decode Image</button>
+	<h1>Steg - Decode</h1>
+	<p>Provide the encoded picture file by clicking "choose image", click "Decode Image" and the hidden message will appear in the "Message" section below the image.</p>
+	<input id="file" type="file"/><br/>
+	<button id="read" type="button">Decode Image</button>
 
 
-				<div id="original" class="half">
+				<div id="original">
 					<h2>Plain Image:</h2>
-					<img id="img" src=""/>
-				</div>
-
-				<div id="stego" class="half">
-					<h2>Encoded Image:</h2>
-					<img id="cover" src=""/>
-					<a id="download" class="btn small" download="cover.png" rel="nofollow"><strong>D</strong></a>
-					<div class="note">Click "D"-button or if it does not work perform right-click to download</div>
+					<img id="img" src="" style="width: 50%"/>
 				</div>
 
 				<div id="messageArea" class="invisible">
@@ -22,7 +16,6 @@
 				</div>
 
 
-		</div>
 		<script type="text/javascript" src="steganography.js"></script>
 		<script type="text/javascript">
 
