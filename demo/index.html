@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="full stack developer">
+  <meta name="author" content="panagiotis bakas">
+
+  <title>Instaclone</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom custom-nav">
+    <div class="container">
+      <div class="row">
+        <h5 class="font-weight-normal">Instaclone</h5>
+        <nav class="ml-auto">
+          <a class="p-2 text-dark" href="index.html"><i data-feather="home"></i></a>
+          <a class="p-2 text-dark" href="#"><i data-feather="send"></i></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="row bio mb-2">
+      <div class="col-md-4 text-center">
+        <img width="160" src="assets/images/profile.jpg" class="rounded-circle mt-3" >
+      </div>
+      <div class="col-md-8 pl-4">
+        <div class="row mt-3"><p class="h3 font-weight-light">Emmett Brown</p></div>
+        <div class="row mt-3 w-75" id="desktop-stats">
+          <div class="col m-0 p-0">
+            <div class="h6">4 <span class="font-weight-normal">posts</span></div>
+          </div>
+          <div class="col m-0 p-0">
+            <div class="h6">226 <span class="font-weight-normal">followers</span></div>
+          </div>
+          <div class="col m-0 p-0">
+            <div class="h6">277 <span class="font-weight-normal">following</span></div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="h6">Scientist</div>
+        </div>
+        <div class="row">
+          <p>🎓 Physics, Ph.D.</p>
+        </div>
+        <div class="row mt-0 pt-0">
+          <p>⚡ Enjoy developing capacitors</p>
+        </div>
+        <div class="row mt-0 pt-0">
+          <p>🏠 Hill Valley</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row border-bottom border-top text-center pt-3 pb-3 mt-3" id="mobile-stats">
+    <div class="col">
+      <div class="h6">4 <span class="font-weight-normal">posts</span></div>
+    </div>
+    <div class="col">
+      <div class="h6">226 <span class="font-weight-normal">followers</span></div>
+    </div>
+    <div class="col">
+      <div class="h6">277 <span class="font-weight-normal">following</span></div>
+    </div>
+  </div>
+
+  <div class="container mb-5">
+
+    <div class="row border-top text-center pt-3 content-tabs">
+      <div class="col">
+        <a class="p-2 text-dark active" data-target="posts-grid" href="#"><i data-feather="grid"></i><span class="ml-2 h6">Posts</span></a>
+      </div>
+      <div class="col">
+        <a class="p-2 text-dark" data-target="tagged-grid" href="#"><i data-feather="tag"></i><span class="ml-2 h6">Tagged</span></a>
+      </div>
+      <div class="col">
+        <a class="p-2 text-dark" data-target="favorites-grid" href="#"><i data-feather="star"></i><span class="ml-2 h6">Favorites</span></a>
+      </div>
+    </div>
+
+    <div class="row content-grid" id="posts-grid">
+      <div class="col-md-4 mt-4">
+        <div class="square" style="background-image: url('assets/images/delorean.jpg')" data-project="project name" data-image="assets/images/delorean.jpg" data-description="Delorean" data-date="21, November 2019"></div>
+      </div>
+      <div class="col-md-4 mt-4">
+            <div class="square" style="background-image: url('assets/images/clock-tower.jpg')" data-project="project name" data-image="assets/images/clock-tower.jpg" data-description="Hill Valley Clock Tower" data-date="21, November 2019"></div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <div class="square" style="background-image: url('assets/images/house.jpg')" data-project="project name" data-image="assets/images/house.jpg" data-description="My house" data-date="21, November 2019"></div>
+      </div>
+      <div class="col-md-4 mt-4">
+        <div class="square" style="background-image: url('assets/images/hill-valley.jpg')" data-project="project name" data-image="assets/images/hill-valley.jpg" data-description="Court House Square" data-date="21, November 2019"></div>
+      </div>
+
+  </div>
+
+  <!-- The Modal -->
+  <div class="project-modal" id="project-modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <div class="row large-screen-modal">
+        <div class="col-md-8">
+          <img id="project-image" src="assets/images/demo.jpg" width="100%">
+        </div>
+        <div class="col-md-4">
+          <div class="row mt-3 creator-info">
+            <div class="col-2"><img width="35" src="assets/images/profile.jpg" class="rounded-circle"></div>
+            <div class="col-8"><p class="h6">Emmett Brown</p><span class="badge badge-primary">Follow</span></div>
+          </div>
+          <div class="row mt-4 mr-2">
+            <div class="col">
+              <p class="mt-2" id="project-description">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+          <p class="project-date mt-5"><small id="project-date">21, November 2019</small></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="assets/scripts/script.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>
