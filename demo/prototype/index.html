@@ -5,17 +5,18 @@
 	<img id="img" src="image.jpg" alt="Test Image" style="width:640px;height:800px;"/>
 	<h2>Output:</h2>
 	<img id="placeholder" src="" style="width:640px;height:800px;"/>
+
 	<script type="text/javascript" src="steganography.js"></script>
 	<script type="text/javascript">
+		function hide() {
+			var img = document.getElementById("img"),
+			placeholder = document.getElementById("placeholder");
+			placeholder.src = steg.encode("zain", img);
+		}
 
-	function hide() {
-		var img = document.getElementById("img"),
-		placeholder = document.getElementById("placeholder");
-		placeholder.src = steg.encode("zain", img);
-	}
-
-	window.onload = function(){
-		hide();
-	};
+		window.onload = function(){
+			hide();
+		};
 	</script>
+	
 </body>
