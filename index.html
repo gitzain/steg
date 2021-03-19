@@ -1,0 +1,364 @@
+<!doctype html>
+<html class="min-height-full">
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   <head>
+      <meta charset="utf-8">
+      <title>Steg</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <style>
+         @import url("https://unpkg.com/primer/build/build.css");
+         .highlight {
+         width: 100%;
+         overflow: auto;
+         background: #ffffff
+         }
+         .highlight .c {
+         color: #999988;
+         font-style: italic
+         }
+         .highlight .err {
+         color: #a61717;
+         background-color: #e3d2d2
+         }
+         .highlight .k {
+         font-weight: bold
+         }
+         .highlight .o {
+         font-weight: bold
+         }
+         .highlight .cm {
+         color: #999988;
+         font-style: italic
+         }
+         .highlight .cp {
+         color: #999999;
+         font-weight: bold
+         }
+         .highlight .c1 {
+         color: #999988;
+         font-style: italic
+         }
+         .highlight .cs {
+         color: #999999;
+         font-weight: bold;
+         font-style: italic
+         }
+         .highlight .gd {
+         color: #000000;
+         background-color: #fdd
+         }
+         .highlight .gd .x {
+         color: #000000;
+         background-color: #faa
+         }
+         .highlight .ge {
+         font-style: italic
+         }
+         .highlight .gr {
+         color: #a00
+         }
+         .highlight .gh {
+         color: #999
+         }
+         .highlight .gi {
+         color: #000000;
+         background-color: #dfd
+         }
+         .highlight .gi .x {
+         color: #000000;
+         background-color: #afa
+         }
+         .highlight .go {
+         color: #888
+         }
+         .highlight .gp {
+         color: #555
+         }
+         .highlight .gs {
+         font-weight: bold
+         }
+         .highlight .gu {
+         color: #aaa
+         }
+         .highlight .gt {
+         color: #a00
+         }
+         .highlight .kc {
+         font-weight: bold
+         }
+         .highlight .kd {
+         font-weight: bold
+         }
+         .highlight .kp {
+         font-weight: bold
+         }
+         .highlight .kr {
+         font-weight: bold
+         }
+         .highlight .kt {
+         color: #445588;
+         font-weight: bold
+         }
+         .highlight .m {
+         color: #099
+         }
+         .highlight .s {
+         color: #d14
+         }
+         .highlight .na {
+         color: teal
+         }
+         .highlight .nb {
+         color: #0086B3
+         }
+         .highlight .nc {
+         color: #445588;
+         font-weight: bold
+         }
+         .highlight .no {
+         color: teal
+         }
+         .highlight .ni {
+         color: purple
+         }
+         .highlight .ne {
+         color: #990000;
+         font-weight: bold
+         }
+         .highlight .nf {
+         color: #990000;
+         font-weight: bold
+         }
+         .highlight .nn {
+         color: #555
+         }
+         .highlight .nt {
+         color: navy
+         }
+         .highlight .nv {
+         color: teal
+         }
+         .highlight .ow {
+         font-weight: bold
+         }
+         .highlight .w {
+         color: #bbb
+         }
+         .highlight .mf {
+         color: #099
+         }
+         .highlight .mh {
+         color: #099
+         }
+         .highlight .mi {
+         color: #099
+         }
+         .highlight .mo {
+         color: #099
+         }
+         .highlight .sb {
+         color: #d14
+         }
+         .highlight .sc {
+         color: #d14
+         }
+         .highlight .sd {
+         color: #d14
+         }
+         .highlight .s2 {
+         color: #d14
+         }
+         .highlight .se {
+         color: #d14
+         }
+         .highlight .sh {
+         color: #d14
+         }
+         .highlight .si {
+         color: #d14
+         }
+         .highlight .sx {
+         color: #d14
+         }
+         .highlight .sr {
+         color: #009926
+         }
+         .highlight .s1 {
+         color: #d14
+         }
+         .highlight .ss {
+         color: #990073
+         }
+         .highlight .bp {
+         color: #999
+         }
+         .highlight .vc {
+         color: teal
+         }
+         .highlight .vg {
+         color: teal
+         }
+         .highlight .vi {
+         color: teal
+         }
+         .highlight .il {
+         color: #099
+         }
+         .highlight .lineno {
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -o-user-select: none
+         }
+         .lineno::-moz-selection {
+         background-color: transparent
+         }
+         .lineno::selection {
+         background-color: transparent
+         }
+         .github-component {
+         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important
+         }
+         .repo-language-color {
+         filter: brightness(125%) !important;
+         border-radius: 50%;
+         display: inline-block;
+         height: 12px;
+         position: relative;
+         top: 2px;
+         width: 12px
+         }
+         .emoji {
+         width: 18px;
+         height: auto;
+         vertical-align: middle
+         }
+         .article h1,
+         .article h2,
+         .article h3,
+         .article h4,
+         .article .highlight {
+         margin-bottom: 16px
+         }
+         .article blockquote {
+         color: #6a737d;
+         border-left: 2px solid #959da5;
+         padding-left: 16px;
+         margin-bottom: 16px
+         }
+         .article ul,
+         .article ol {
+         padding-left: 32px;
+         margin-bottom: 16px
+         }
+         .article li ul,
+         .article li ol {
+         padding-left: 16px;
+         margin-bottom: 0px
+         }
+         .min-height-full {
+         min-height: 100vh
+         }
+      </style>
+   </head>
+   <body class="bg-white min-height-full" >
+      <div class="d-md-flex min-height-full border-md-bottom">
+      <div class="flex-self-stretch border-md-right border-gray-light bg-white col-md-5 col-lg-4 col-xl-3 px-4 px-md-6 px-lg-7 py-6">
+         <h1 class=" mb-2 lh-condensed">Steg</h1>
+         <p class="f3 mb-3 text-gray">Protect your copyright images.</p>
+      </div>
+      <div class="col-md-7 col-lg-8 col-xl-9 px-4 py-6 px-lg-7 border-top border-md-top-0 bg-gray-light" >
+      <div class="mx-auto" style="max-width: 900px;">
+         <h2 >Demos</h2>
+         <p class="f4 mb-4 text-gray">Some stubbed example websites to show Steg in action.</p>
+         <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
+            <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+               <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+                  <div>
+                     <div class="d-flex flex-justify-between flex-items-start mb-1">
+                        <h1 class="f4 lh-condensed mb-1">
+                           <a href="https://github.com/gitzain/sortphotos">
+                              <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img">
+                                 <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                              </svg>
+                              Instaclone
+                           </a>
+                        </h1>
+                     </div>
+                     <div class="text-gray mb-2 ws-normal">Mockup based on Instagram.</div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+               <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+                  <div>
+                     <div class="d-flex flex-justify-between flex-items-start mb-1">
+                        <h1 class="f4 lh-condensed mb-1">
+                           <a href="https://github.com/gitzain/sortphotos">
+                              <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img">
+                                 <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                              </svg>
+                              Minifolio
+                           </a>
+                        </h1>
+                     </div>
+                     <div class="text-gray mb-2 ws-normal">Mockup of a personal website.</div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+               <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+                  <div>
+                     <div class="d-flex flex-justify-between flex-items-start mb-1">
+                        <h1 class="f4 lh-condensed mb-1">
+                           <a href="https://github.com/gitzain/sortphotos">
+                              <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img">
+                                 <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                              </svg>
+                              Portfolio
+                           </a>
+                        </h1>
+                     </div>
+                     <div class="text-gray mb-2 ws-normal">Mockup of a personal portfolio.</div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+               <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+                  <div>
+                     <div class="d-flex flex-justify-between flex-items-start mb-1">
+                        <h1 class="f4 lh-condensed mb-1">
+                           <a href="https://github.com/gitzain/sortphotos">
+                              <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img">
+                                 <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                              </svg>
+                              Prototype Frontend
+                           </a>
+                        </h1>
+                     </div>
+                     <div class="text-gray mb-2 ws-normal">Proof of concept page for the frontend.</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <h2>Admin</h2>
+         <p class="f4 mb-4 text-gray">Example backend to demo how that would work.</p>
+         <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
+            <div class="github-component d-flex flex-column flex-justify-between height-full text-left border border-gray-light bg-white rounded-1 p-3">
+               <div>
+                  <div class="d-flex flex-justify-between flex-items-start mb-1">
+                     <h1 class="f4 lh-condensed mb-1">
+                        <a href="https://github.com/gitzain/sortphotos">
+                           <svg height="20" class="octicon octicon-repo mr-1 v-align-middle" fill="#586069" aria-label="repo" viewBox="0 0 16 16" version="1.1" width="20" role="img">
+                              <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                           </svg>
+                           Prototype Backend
+                        </a>
+                     </h1>
+                  </div>
+                  <div class="text-gray mb-2 ws-normal">Proof of concept page for the backend.</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
