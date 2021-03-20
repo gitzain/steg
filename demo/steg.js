@@ -10,10 +10,6 @@ function stegger(h, m) {
       img.src = steg.encode(m, img);
     }
   }
-
-  alert(imgSrcs.length);
-
-  
 }
 
 ;(function (name, context, factory) {
